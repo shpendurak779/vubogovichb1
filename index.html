@@ -1,145 +1,119 @@
-<html>
-  <head>
-    <title>Обо мне</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background: linear-gradient(45deg, #FFF3E0, #FFE0B2);
-        color: #2E2E2E;
-        line-height: 1.6;
-      }
-        header {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-  }
+<html> 
+  <head> 
+    <title>Обо мне</title> 
+      <style>
+        body {
+          margin: 0;
+          padding: 20px;
+          background: #0a0a0a;
+          color: #e0e0e0;
+          font-family: 'Arial', sans-serif;
+          line-height: 1.6;
+        }
+        main {
+          max-width: 1200px;
+          margin: 80px auto 40px;
+          display: flex;
+          gap: 40px;
+          align-items: center;
+          padding: 30px;
+          background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+          border-radius: 15px;
+          box-shadow: 0 0 20px rgba(0, 255, 221, 0.1);
+        }
 
-  .link-header {
-    text-decoration: none;
-    color: #FF8A65;
-    margin-right: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    padding: 10px 20px;
-    border-radius: 8px;
-  }
+        h1 {
+          font-size: 2.5em;
+          color: #00FFDD;
+          text-shadow: 0 0 10px rgba(0, 255, 221, 0.3);
+          margin: 0;
+        }
 
-  .link-header:hover {
-    background: #FF8A65;
-    color: white;
-    box-shadow: none;
-  }
+        ul {
+          list-style: none;
+          padding: 0;
+        }
 
-  main {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
+        li {
+          margin-bottom: 15px;
+          padding: 10px;
+          border-left: 3px solid #00B7FF;
+          transition: all 0.3s;
+        }
 
-  h1 {
-    text-align: center;
-    color: #FF7043;
-    font-size: 3em;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
-  }
+        li:hover {
+          transform: translateX(10px);
+          border-left-color: #D9FF00;
+        }
 
-  p {
-    font-size: 1.2em;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  }
+        a {
+          color: #00B7FF;
+          text-decoration: none;
+          position: relative;
+          padding: 5px 0;
+        }
 
-  ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 30px 0;
-  }
+        a::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background: #D9FF00;
+          transition: width 0.3s;
+        }
 
-  ul li {
-    background: #FFAB91;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 25px;
-    transition: transform 0.3s ease;
-  }
+        a:hover::after {
+          width: 100%;
+        }
 
-  ul li:hover {
-    transform: translateY(-3px);
-  }
+        img {
+          width: 300px;
+          filter: drop-shadow(0 0 15px rgba(0, 255, 221, 0.4));
+          border-radius: 10px;
+        }
 
-  img {
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    margin: 20px 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    width: 100%;
-    height: auto;
-  }
+        ul.projects {
+          max-width: 1200px;
+          margin: 40px auto;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          padding: 20px;
+        }
 
-  img:hover {
-    transform: scale(1.02);
-  }
+        ul.projects li {
+          background: #151515;
+          padding: 20px;
+          border-radius: 8px;
+          border: 1px solid #2a2a2a;
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-  footer {
-    text-align: center;
-    padding: 30px;
-    background: #FF7043;
-    margin-top: 50px;
-  }
-
-  .social img {
-    width: 60px;
-    filter: brightness(0) invert(1);
-    transition: transform 0.3s ease;
-  }
-
-  .social:hover img {
-    transform: rotate(15deg);
-  }
-
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin: 40px 0;
-  }
-</style>
-
-</head>
-<body>
-  <header>
-    <a class="link-header"
-    href="index.html">Главная</a>
-    <a class="link-header"
-    href="projects.html">Проекты</a>
-    </header>
-    <main>
-      <h1>Убогович Владимир</h1>
-      <p>Я люблю программировать и создавать интересные проекты. В свободное время играю с братом в Terraria и слушаю любимую музыку.</p>
-        <ul>
-    <li>🎮 Гейминг</li>
-    <li>🎵 Музыка Makana</li>
-    <li>💻 Веб-разработка</li>
-  </ul>
-
-  <div class="image-grid">
-    <img src="https://ir.ozone.ru/s3/multimedia-n/w500/6580661135.jpg" alt="Рабочее пространство"/>
-    <img src="https://248006.selcdn.ru/main/iblock/8c2/8c2e5c43eecb388692b833642b95248c/0b42cf3415d53b6ebd94fd611d8c73dd.jpg" alt="Проекты"/>
-  </div>
-</main>
-<footer>
-  <a class="social" href="#">
-    <img src="https://learn.algoritmika.org/uploads/2021/04/Group%201_0_1618254571.png" alt="Соцсети"/>
-  </a>
-</footer>
+        ul.projects li:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 5px 15px rgba(0, 255, 221, 0.2);
+        }
+      </style>
+      </head>
+      <body>
+        <main>
+          <div>
+            <h1>Убогович Сергей</h1>
+              <ul>
+                <li>💻 Люблю писать код</li>
+                <li>🚴 Катаюсь на велосипеде</li>
+                <li>🌐 Создаю современные сайты</li>
+              </ul>
+          </div>
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxMDAwIDEwMDAiIGZpbGw9Im5vbmUiPjxyZWN0IHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiMwNjA2MDYiLz48ZWxsaXBzZSBjeD0iNTI0IiBjeT0iNDI1IiByeD0iMjA5IiByeT0iMjA0IiBmaWxsPSIjMEVlNTBFIi8+PHBhdGggZD0iTTQxMS4xODQgNTkzLjE2NUw0NjYuMzA4IDYyNS4xNjVMNTQ3LjAyNCA2MzUuMTY1QzU0Ny4wMjQgNjM1LjE2NSA2MzkuODIgNjE0Ljg0IDYzNy41ODUgNjA3LjE2NUM2MzUuMzQ5IDU5OS40ODkgNjkxLjA0MiA1NzIuNjQgNzAwLjU4MyA1NDcuMTY1QzcwOS4zMzIgNTIzLjgwNSA2MzcuNTg1IDU0Ny4xNjUgNjM3LjU4NSA1NDcuMTY1TDU2Mi43NzQgNTI5LjE2NUg0ODUuOTk1QzQ4NS45OTUgNTI5LjE2NSA0MTUuMzAxIDU0My44ODUgNDExLjE4NCA1NzkuMTY1QzQxMC41NTEgNTg0LjU5NCA0MTEuMTg0IDU5My4xNjUgNDExLjE4NCA1OTMuMTY1WiIgZmlsbD0iIzAwRkZERCIvPjxwYXRoIGQ9Ik0zNDQuMjQ4IDMzOS4xNjVDMzEzLjcwNCAzMzQuMjQ1IDM2Ni42ODEgMjk0LjMzNyAzODkuNTI4IDI3My4xNjVDNDE0LjY4OCAyNDkuODQ5IDQzMy45MjkgMjQxLjg4NCA0NjYuMzA4IDIzMS4xNjVDNDkwLjgyNiAyMjMuMDQ4IDUwNS41MiAyMjAuNDc4IDUzMS4yNzUgMjE5LjE2NUM1NjYuODk2IDIxNy4zNDggNjIxLjgzNSAyMzEuMTY1IDYyMS44MzUgMjMxLjE2NUM2MjEuODM1IDIzMS4xNjUgNjU1LjQwNiAyNTUuMzM1IDY3NC45OSAyNzMuMTY1QzY5MC4zNzUgMjg3LjE3MSA3MTIuMDg0IDI5MC4xOCA3MTIuMzk1IDMxMS4xNjVDNzEyLjgzOSAzNDEuMDk3IDYzNy41ODUgMzIxLjE2NSA2MzcuNTg1IDMyMS4xNjVDNjM3LjU4NSAzMjEuMTY1IDUzMi43NTMgMzAyLjQzOSA0NjYuMzA4IDMxMS4xNjVDNDIzLjAzNCAzMTYuODQ3IDM1OC4wMjkgMzM5LjE2NSAzNTguMDI5IDMzOS4xNjVDMzU4LjAyOSAzMzkuMTY1IDM0OS41NjQgMzQwLjAyMSAzNDQuMjQ4IDMzOS4xNjVaIiBmaWxsPSIjMDBGRkREIi8+PHBhdGggZD0iTTQxMS4xODQgNTkzLjE2NUw0NjYuMzA4IDYyNS4xNjVMNTQ3LjAyNCA2MzUuMTY1QzU0Ny4wMjQgNjM1LjE2NSA2MzkuODIgNjE0Ljg0IDYzNy41ODUgNjA3LjE2NUM2MzUuMzQ5IDU5OS40ODkgNjkxLjA0MiA1NzIuNjQgNzAwLjU4MyA1NDcuMTY1QzcwOS4zMzIgNTIzLjgwNSA2MzcuNTg1IDU0Ny4xNjUgNjM3LjU4NSA1NDcuMTY1TDU2Mi43NzQgNTI5LjE2NUg0ODUuOTk1QzQ4NS45OTUgNTI5LjE2NSA0MTUuMzAxIDU0My44ODUgNDExLjE4NCA1NzkuMTY1QzQxMC41NTEgNTg0LjU5NCA0MTEuMTg0IDU5My4xNjUgNDExLjE4NCA1OTMuMTY1WiIgc3Ryb2tlPSIjMDBCN0ZGIi8+PHBhdGggZD0iTTM0NC4yNDggMzM5LjE2NUMzMTMuNzA0IDMzNC4yNDUgMzY2LjY4MSAyOTQuMzM3IDM4OS41MjggMjczLjE2NUM0MTQuNjg4IDI0OS44NDkgNDMzLjkyOSAyNDEuODg0IDQ2Ni4zMDggMjMxLjE2NUM0OTAuODI2IDIyMy4wNDggNTA1LjUyIDIyMC40NzggNTMxLjI3NSAyMTkuMTY1QzU2Ni44OTYgMjE3LjM0OCA2MjEuODM1IDIzMS4xNjUgNjIxLjgzNSAyMzEuMTY1QzYyMS44MzUgMjMxLjE2NSA2NTUuNDA2IDI1NS4zMzUgNjc0Ljk5IDI3My4xNjVDNjkwLjM3NSAyODcuMTcxIDcxMi4wODQgMjkwLjE4IDcxMi4zOTUgMzExLjE2NUM3MTIuODM5IDM0MS4wOTcgNjM3LjU4NSAzMjEuMTY1IDYzNy41ODUgMzIxLjE2NUM2MzcuNTg1IDMyMS4xNjUgNTMyLjc1MyAzMDIuNDM5IDQ2Ni4zMDggMzExLjE2NUM0MjMuMDM0IDMxNi44NDcgMzU4LjAyOSAzMzkuMTY1IDM1OC4wMjkgMzM5LjE2NUMzNTguMDI5IDMzOS4xNjUgMzQ5LjU2NCAzNDAuMDIxIDM0NC4yNDggMzM5LjE2NVoiIHN0cm9rZT0iIzAwQjdGRiIvPjxwYXRoIGQ9Ik0zOTEgNTc3QzM5MSA1NzcgNDU3Ljg0OCA1MzEuOTcxIDUwNyA1MjVDNTU0LjU3NiA1MTguMjUyIDYyOSA1NDEgNjI5IDU0MUg2OTciIHN0cm9rZT0iIzAwQjdGRiIvPjxwYXRoIGQ9Ik0yMjIgNjA5TDIzNi41OTMgNjQ2LjMxM0gyODMuODE5TDI0NS42MTMgNjY5LjM3NEwyNjAuMjA2IDcwNi42ODdMMjIyIDY4My42MjZMMTgzLjc5NCA3MDYuNjg3TDE5OC4zODcgNjY5LjM3NEwxNjAuMTgxIDY0Ni4zMTNIMjA3LjQwN0wyMjIgNjA5WiIgZmlsbD0iI0Q5RkYwMCIvPjxwYXRoIGQ9Ik0xOTggMTU1TDIwOS4wMDEgMTk5LjkxNEgyNDQuNjAyTDIxNS44IDIyNy42NzJMMjI2LjgwMSAyNzIuNTg2TDE5OCAyNDQuODI4TDE2OS4xOTkgMjcyLjU4NkwxODAuMiAyMjcuNjcyTDE1MS4zOTggMTk5LjkxNEgxODYuOTk5TDE5OCAxNTVaIiBmaWxsPSIjRDlGRjAwIi8+PHBhdGggZD0iTTcwMyA4MUw3MTYuNDcxIDExMC4wMjFINzYwLjA2M0w3MjQuNzk2IDEyNy45NTdMNzM4LjI2NyAxNTYuOTc5TDcwMyAxMzkuMDQzTDY2Ny43MzMgMTU2Ljk3OUw2ODEuMjA0IDEyNy45NTdMNjQ1LjkzNyAxMTAuMDIxSDY4OS41MjlMNzAzIDgxWiIgZmlsbD0iI0Q5RkYwMCIvPjxwYXRoIGQ9Ik02NzYgNjU3TDY4OC43OTcgNjk3Ljc2OEg3MzAuMjFMNjk2LjcwNiA3MjIuOTY0TDcwOS41MDQgNzYzLjczMkw2NzYgNzM4LjUzNkw2NDIuNDk2IDc2My43MzJMNjU1LjI5NCA3MjIuOTY0TDYyMS43OSA2OTcuNzY4SDY2My4yMDNMNjc2IDY1N1oiIGZpbGw9IiNEOUZGMDAiLz48cGF0aCBkPSJNMzMxIDM0N0MzMzEgMzQ3IDM4NS4zOTIgMjk3LjYyNyA0NTEgMzA3QzUxNi42MDggMzE2LjM3MyA1NTMuMzkyIDMyMS42MjcgNjE5IDMzMUM2NDUuNTU2IDMyNS41MzMgNjYwLjQ0NCAzMjIuNDY3IDY4NyAzMTdINzAzVjMwNyIgc3Ryb2tlPSJibGFjayIvPjxyZWN0IHg9Ijc5MCIgeT0iMjY1IiB3aWR0aD0iMTE2IiBoZWlnaHQ9IjEzOCIgcng9IjU4IiBmaWxsPSIjRDlEQjlEIi8+PGVsbGlwc2UgY3g9Ijg0OCIgY3k9IjMzNCIgcng9Ijg1IiByeT0iOTEiIGZpbGw9IiNEOURCOUQiLz48ZWxsaXBzZSBjeD0iODIwIiBjeT0iMzg0IiByeD0iMjMiIHJ5PSIyMSIgZmlsbD0iI0Q5REI5RCIvPjwvc3ZnPg==" alt="Программист">
+          </main>
+          <ul class="projects">
+            <li><a href="https://sergeyubogovich.tilda.ws/page55618443.html">🔧 Мой первый сайт о паянии как хобби</a></li>
+            <li><a href="https://project10964715.tilda.ws/">🐠 Сайт о рыбах-клоунах (дизайн от брата Вовы)</a></li>
+            <li><a href="https://shpendurak779.github.io/vubogovichb1/site3.html">🎨 Практика CSS-селекторов</a></li>
+            <li><a href="https://shpendurak779.github.io/vubogovichb1/site2.html">🦄 Сайт о редких животных, первые анимации</a></li> <li><a href="https://shpendurak779.github.io/vubogovichb1/site1.html">🎵 Сайт с любимой музыкой</a></li>
+          </ul>
 </body>
 </html>
